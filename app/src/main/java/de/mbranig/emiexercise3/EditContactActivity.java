@@ -16,7 +16,7 @@ public class EditContactActivity extends AppCompatActivity {
 
     private void InitializeActivity() {
         /*
-        TODO: (TASK 2.3) Design a GUI, link widgets and fill this
+        TODO: (TASK 3.3) Design a GUI, link widgets and fill this
          */
     }
 
