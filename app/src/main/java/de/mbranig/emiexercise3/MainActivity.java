@@ -1,4 +1,4 @@
-package de.davidgollasch.emiexercise2;
+package de.mbranig.emiexercise3;
 
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
