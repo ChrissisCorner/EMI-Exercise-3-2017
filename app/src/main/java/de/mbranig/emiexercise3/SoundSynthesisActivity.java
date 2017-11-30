@@ -96,8 +96,12 @@ public class SoundSynthesisActivity extends AppCompatActivity {
              */
             void fillblockSine() {
                 for (int i = 0; i < buffsize; i++) {
+
+
+
                     /*
-                    TODO: (TASK 3.1) Calculate the values for a sine wave with amplitude amp and frequency fr. Store them in samples [i] and don't forget to increase ph.
+                    TODO: (TASK 3.1) Calculate the values for a sine wave with amplitude amp and frequency fr.
+                    Store them in samples [i] and don't forget to increase ph.
                      */
                 }
                 audioTrack.write(samples, 0, buffsize);

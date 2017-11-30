@@ -5,8 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactManagementActivity extends AppCompatActivity {
 
@@ -24,9 +28,7 @@ public class ContactManagementActivity extends AppCompatActivity {
     TODO: (TASK 3.3) Add required new UI widgets (Button) here
      */
 
-    /*
-    TODO: (TASK 3.2) Add data structure for contact details here
-     */
+    Contacts newcontact[] = new Contacts [5];
 
 
     @Override
@@ -54,38 +56,37 @@ public class ContactManagementActivity extends AppCompatActivity {
         tvCity = (TextView) findViewById(R.id.textViewCity);
         tvCountry = (TextView) findViewById(R.id.textViewCountry);
 
-        /*
-        TODO: (TASK 3.3) Bind required new UI widgets (Button) here
-         */
 
 
-        /*
-        TODO: (TASK 3.2) Fill contacts
 
-        IMPORTANT: Fill the list with at least one item. Else, the spinner could look empty for some reason.
-
-        1. create list of contacts
-
-        2. create ArrayAdapter adapter
-
-        3. spContacts.setAdapter(adapter);
-         */
-
-        /*
-        Herr Robert Meyer       Frau Elisabeth Stramm       Herr Stefan Wennige
-        Apfelbergstraße 10      Fritz-Konzert-Straße 1a     Kirchplatz 13
-        9430 St. Margrethen     6020 Innsbruck              6112 Wattens
-        Schweiz                 Österreich                  Österreich
+         newcontact[0] = new Contacts("Herr", "Robert", "Meyer", "Apfelbergstraße 10", "9430", "St. Margrethen", "Schweiz");
+         newcontact[1] = new Contacts("Frau", "Elisabeth", "Stramm", "Fritz-Konzert-Straße 1a", "6020", "Insbruck", "Österreich");
+         newcontact[2] = new Contacts("Herr", "Stefan", "Wennige", "Kirchplatz 13", "6112", "wattens", "Österreich");
+         newcontact[3] = new Contacts ("Frau","Ella", "Beckmann", "Falkenstraße 3", "01067", "Dresden", "Deutschland");
+         newcontact[4] = new Contacts("Frau", "Anna", "Watson","1 Langdon Park Rd", "N6 5PS", "London", "Vereinigtes Königreich");
 
 
-        Frau Ella Beckmann      Frau Anne Watson
-        Falkenstraße 3          1 Langdon Park Rd
-        01067 Dresden           London N6 5PS
-        Deutschland             Vereinigtes Königreich
-         */
+
+
+
+        // Spinner Drop down elements
+        List<String> el = new ArrayList<String>();
+
+        for(int i =0; i<newcontact.length;i++){
+            el.add(newcontact[i].getLastname());
+        }
+
+
+        //adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, el);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spContacts.setAdapter(dataAdapter);
+
 
 
         spContacts.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(!(view instanceof TextView))
@@ -93,6 +94,9 @@ public class ContactManagementActivity extends AppCompatActivity {
 
                 TextView item = (TextView) view;
                 String selectedName = item.getText().toString();
+
+                selectedName = (String) parent.getItemAtPosition(position).toString();
+
 
                 /*
                 TODO: selectedName contains the selected spinner item as String Show
@@ -104,6 +108,7 @@ public class ContactManagementActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+
                 // do nothing
             }
         });
@@ -119,13 +124,27 @@ public class ContactManagementActivity extends AppCompatActivity {
 
         // TODO: Fill TextViews with contact details
 
-        tvTitle.setText("");
-        tvFirstName.setText("");
-        tvLastName.setText("");
-        tvAddress.setText("");
-        tvZip.setText("");
-        tvCity.setText("");
-        tvCountry.setText("");
+
+        for (int i = 0; i<newcontact.length; i++) {
+            if (newcontact[i].getLastname().equals(contactName)){
+
+
+                    tvTitle.setText(newcontact[i].getTitle());
+                    tvFirstName.setText(newcontact[i].getFirstname());
+                    tvLastName.setText(newcontact[i].getLastname());
+                    tvAddress.setText(newcontact[i].getAddresse());
+                    tvZip.setText(newcontact[i].getZip());
+                    tvCity.setText(newcontact[i].getCity());
+                    tvCountry.setText(newcontact[i].getCountry());
+
+
+
+
+            }
+
+        }
+
+
     }
 
 }

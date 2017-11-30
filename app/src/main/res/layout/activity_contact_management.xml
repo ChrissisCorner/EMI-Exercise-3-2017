@@ -53,13 +53,14 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Title"
                 android:id="@+id/textView2" android:layout_column="0" android:layout_marginRight="7dp"/>
+
             <TextView
+                android:id="@+id/textViewTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_column="1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:id="@+id/textViewTitle" android:layout_column="1"
-                android:textColor="@color/tuAkzentfarbe1BlauHell"/>
+                android:textColor="@color/tuAkzentfarbe1BlauHell" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -70,20 +71,24 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Name"
                 android:id="@+id/textView3" android:layout_column="0" android:layout_marginRight="7dp"/>
+
             <TextView
+                android:id="@+id/textViewFirstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight=".30"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:id="@+id/textViewFirstName" android:layout_column="1" android:layout_weight=".30"
-                android:textColor="@color/tuAkzentfarbe1BlauHell"/>
+                android:textColor="@color/tuAkzentfarbe1BlauHell" />
+
             <TextView
+                android:id="@+id/textViewLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_weight=".3"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:id="@+id/textViewLastName" android:layout_column="4" android:layout_weight=".3"
-                android:textColor="@color/tuAkzentfarbe1BlauHell"/>
+                android:textColor="@color/tuAkzentfarbe1BlauHell" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -94,13 +99,15 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Address"
                 android:id="@+id/textView8" android:layout_column="0" android:layout_marginRight="7dp"/>
+
             <TextView
+                android:id="@+id/textViewAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_span="4"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:id="@+id/textViewAddress" android:layout_column="1" android:layout_span="4"
-                android:textColor="@color/tuAkzentfarbe1BlauHell"/>
+                android:textColor="@color/tuAkzentfarbe1BlauHell" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -111,13 +118,15 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="City"
                 android:id="@+id/textView9" android:layout_column="0" android:layout_marginRight="7dp"/>
+
             <TextView
+                android:id="@+id/textViewCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight=".3"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:id="@+id/textViewCity" android:layout_column="1" android:layout_weight=".3"
-                android:textColor="@color/tuAkzentfarbe1BlauHell"/>
+                android:textColor="@color/tuAkzentfarbe1BlauHell" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,13 +134,15 @@
                 android:text="Zip"
                 android:id="@+id/textView10" android:layout_column="3" android:layout_marginRight="7dp"
                 android:layout_marginLeft="7dp"/>
+
             <TextView
+                android:id="@+id/textViewZip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_weight=".3"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:id="@+id/textViewZip" android:layout_column="4" android:layout_weight=".3"
-                android:textColor="@color/tuAkzentfarbe1BlauHell"/>
+                android:textColor="@color/tuAkzentfarbe1BlauHell" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -142,13 +153,15 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Country"
                 android:id="@+id/textView11" android:layout_column="0" android:layout_marginRight="7dp"/>
+
             <TextView
+                android:id="@+id/textViewCountry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_span="4"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:id="@+id/textViewCountry" android:layout_column="1" android:layout_span="4"
-                android:textColor="@color/tuAkzentfarbe1BlauHell"/>
+                android:textColor="@color/tuAkzentfarbe1BlauHell" />
         </TableRow>
     </TableLayout>
 </RelativeLayout>
