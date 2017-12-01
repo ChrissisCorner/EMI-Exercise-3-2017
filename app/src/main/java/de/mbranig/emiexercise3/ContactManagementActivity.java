@@ -1,11 +1,13 @@
 package de.mbranig.emiexercise3;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -27,6 +29,10 @@ public class ContactManagementActivity extends AppCompatActivity {
     /*
     TODO: (TASK 3.3) Add required new UI widgets (Button) here
      */
+    //private Button btEdit;
+
+    private Button btnEdit;
+
 
     Contacts newcontact[] = new Contacts [5];
 
@@ -55,6 +61,14 @@ public class ContactManagementActivity extends AppCompatActivity {
         tvZip = (TextView) findViewById(R.id.textViewZip);
         tvCity = (TextView) findViewById(R.id.textViewCity);
         tvCountry = (TextView) findViewById(R.id.textViewCountry);
+
+        btnEdit = (Button) findViewById(R.id.btnEdit);
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ContactManagementActivity.this, EditContactActivity.class));
+            }
+        });
 
 
 

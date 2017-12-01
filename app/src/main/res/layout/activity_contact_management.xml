@@ -33,13 +33,7 @@
         android:id="@+id/textView" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerContacts"
-        android:layout_below="@+id/textView" android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" android:layout_marginTop="20dp"
-        />
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" android:layout_below="@+id/spinnerContacts"
@@ -147,12 +141,15 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:layout_marginBottom="5dp">
+
             <TextView
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_height="25dp"
+                android:layout_column="0"
+                android:layout_marginRight="7dp"
                 android:text="Country"
-                android:id="@+id/textView11" android:layout_column="0" android:layout_marginRight="7dp"/>
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
                 android:id="@+id/textViewCountry"
@@ -164,4 +161,25 @@
                 android:textColor="@color/tuAkzentfarbe1BlauHell" />
         </TableRow>
     </TableLayout>
+
+    <Spinner
+        android:id="@+id/spinnerContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tableLayout"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="16dp"
+        android:text="Edit" />
 </RelativeLayout>
